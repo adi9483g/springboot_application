@@ -11,7 +11,7 @@ once the backend runs you can goto to
 GET http://localhost:8080/1234567
 
 3.clone the frontend application using 
-git clone https://github.com/adi9483g/angular_apllication.git.
+git clone https://github.com/adi9483g/angular_application.git.
 
 4.install node modules using
 npm install
