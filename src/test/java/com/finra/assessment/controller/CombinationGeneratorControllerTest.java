@@ -26,7 +26,7 @@ public class CombinationGeneratorControllerTest {
     @MockBean
     MakeCombinations makeCombinations;
     @Test
-    public void combinationsInvalidInputTest()throws Exception {
+    public void combinationsInvalidInputTest()throws Exception { // testing for invalid input string
         String sampleInput = "321";
         MvcResult mvcResult = this.mockMvc.perform(get("/" + sampleInput)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isBadRequest()).andReturn();
@@ -34,7 +34,7 @@ public class CombinationGeneratorControllerTest {
         assertEquals("Invalid!", response.getContentAsString());
     }
     @Test
-    public void combinationsInvalidTest()throws Exception {
+    public void combinationsInvalidTest()throws Exception { // testing for valid input string
         String sampleInput = "7654321";
         MvcResult mvcResult = this.mockMvc.perform(get("/" + sampleInput)
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andReturn();
